@@ -1,0 +1,36 @@
+.choose-layout {
+    padding: 50px 0 25px 0;
+    @extend %flex;
+    justify-content: flex-end;
+    border-bottom: 2px solid $green-dark;
+
+    &__text {
+        @extend %font-20-b;
+        color: $green-dark;
+    }
+
+    &__button {
+        margin-left: 25px;
+
+        & svg {
+            pointer-events: none;
+        }
+
+        & rect {
+            transition: fill .3s;
+        }
+
+        &--active,
+        &:hover {
+            cursor: pointer;
+
+            & rect {
+                fill: $gray-hover;
+            }
+        }
+    }
+
+    @include breakpoint($l) {
+        padding: 130px 0 25px 0;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Home and House Immobilien</title>
+    <meta name="description" content="Diplomarbeit von Stefan Turner.">
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="../favicon.ico" sizes="any">
+</head>
+<body id="objekt" data-page="property">
+    <include src="./partials/propertydetails/overlayform.html"></include>
+    <include src="./partials/general/header.html"></include>
+    <main class="main">
+        <section class="property-details">
+            <div class="property-details__content">
+                <a class="property-details__backlink" href="">
+                    <svg class="property-details__back-img" width="10" height="16" viewBox="0 0 10 16" fill="none">
+                        <path d="M1 15L8 8L0.999999 1" stroke-width="2"/>
+                    </svg>
+                    <p class="property-details__back-text">zurück zur Übersicht</p>
+                </a>
+                <div class="property-details__container">
+                    <h1 class="property-details__h1"></h1>
+                    <include src="./partials/propertydetails/slider.html"></include>
+                    <div class="property-details__desc-container">
+                        <div class="property-details__stats"></div>
+                        <div class="property-details__description">
+                            <h2 class="property-details__h2">Beschreibung</h2>
+                            <p class="property-details__value property-details__value--description"></p>
+                        </div>
+                        <div class="property-details__map"></div>
+                        <div class="property-details__cta">
+                            <h2 class="property-details__cta-title">Haben wir Ihr interesse geweckt?</h2>
+                            <button class="property-details__cta-button">Jetzt anfragen!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <include src="./partials/propertydetails/latestlistings.html"></include>
+    </main>
+    <include src="./partials/general/footer.html"></include>
+    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuVfhijPNZn3ecKcjnBJtwtjD8U6f2BB4&callback=initMap"></script>
+</body>
+</html>

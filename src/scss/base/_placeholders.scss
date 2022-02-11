@@ -1,0 +1,93 @@
+//Typography
+%font-16-r {
+    font-size: 1rem;
+    color: $black;
+    font-weight: $regular;
+    line-height: 25px;
+}
+
+%font-16-b {
+    font-size: 1rem;
+    color: $black;
+    font-weight: $bold;
+}
+
+%font-18-r {
+    font-size: 1.125rem;
+    color: $black;
+    font-weight: $regular;
+}
+
+%font-18-b {
+    font-size: 1.125rem;
+    color: $black;
+    font-weight: $bold;
+}
+
+%font-20-b {
+    font-size: 1.25rem;
+    color: $black;
+    font-weight: $bold;
+}
+
+%font-22-b {
+    font-size: 1.375rem;
+    color: $black;
+    font-weight: $bold;
+}
+
+%font-24-r {
+    //mobile title h1
+    font-size: 1.5rem;
+    color: $black;
+    font-weight: $regular;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+%font-24-b {
+    font-size: 1.5rem;
+    color: $black;
+    font-weight: $bold;
+    text-align: center;
+}
+
+//Buttons
+%button {
+    padding: 15px 35px;
+    width: 100%;
+    display: block;
+    background-color: $green-dark;
+    @extend %font-16-b;
+    color: $white;
+    text-align: center;
+    transition: background-color .3s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: $gray-hover;
+    }
+}
+
+//Layout
+%flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%content-width {
+    width: 85%;
+    max-width: $cwl;
+    margin: 0 auto;
+}
+
+//transition
+%transition {
+    transition: color .3s;
+}
+
+//input
+%focus {
+    box-shadow: inset 0 0 2px 2px #9690CA;
+}

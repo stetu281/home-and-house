@@ -1,0 +1,86 @@
+.search-form {
+
+    &__label {
+        @extend %font-16-b;
+        display: block;
+
+        &:not(:first-child) {
+            margin-top: 20px;
+        }
+    }
+
+    &__select {
+        margin-top: 15px;
+        padding: 15px;
+        width: 100%;
+        background: url(../img/Icons/form-select-arrow.svg) no-repeat center right 15px;
+        background-color: $white;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+    }
+
+    &__button {
+        margin: 50px auto 0 auto;
+        @extend %button;
+        max-width: 400px;
+    }
+
+    @include breakpoint($l) {
+        @include col-3;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "what where toggle"
+                             "sort . button";
+        row-gap: 40px;
+
+        &__label {
+        
+            &:not(:first-child) {
+                margin-top: unset;
+            }
+        }
+
+        &__what {
+            grid-area: what;            
+        }
+
+        &__where {
+            grid-area: where;            
+        }
+
+        &__sort {
+            grid-area: sort;            
+        }
+
+        &__select {
+            margin-top: 10px;
+            padding: 10px 15px;
+        }
+
+        &__button {
+            padding: 10px 35px;
+            margin: unset;
+            max-width: unset;
+            grid-area: button;
+            align-self: end;
+            
+        }
+    }
+
+    @include breakpoint($xl) {
+        column-gap: 90px;
+
+        &__label {
+            font-size: 1.25rem;
+        }
+
+        &__select {
+            font-size: 1.125rem;
+        }
+
+        &__button {
+            padding: 8px 35px; 
+            font-size: 1.25rem;
+        }
+    }
+}

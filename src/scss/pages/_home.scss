@@ -1,0 +1,158 @@
+.properties {
+    padding: $mobile-padding;
+    background-color: $green-light;
+
+    &__content {
+        @extend %content-width;
+    }
+
+    &__title {
+        @extend %font-24-r;
+    }
+
+    @include breakpoint($m) {
+        padding: $desktop-padding;
+
+        &__title {
+            font-size: 2.5rem;
+            padding-bottom: 90px;
+        }
+    }
+
+    @include breakpoint($l) {
+        padding: 150px 0 90px 0;
+    }
+}
+
+.property-list {
+
+    &__more-button {
+        @extend %button;
+        max-width: 400px;
+        margin: 50px auto 0 auto;
+    }
+
+    @include breakpoint($l) {
+
+        &__more-button {
+            display: none;
+        }
+    }
+}
+
+.listings-container {
+    //tile layout
+    margin-top: 30px;
+    display: grid;
+    column-gap: 40px;
+    row-gap: 50px;
+
+    &__no-result {
+        margin-top: 100px;
+        @extend %font-24-b;
+
+        &--hide {
+            display: none;
+        }
+    }
+
+    @include breakpoint($m) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint($l) {
+        @include col-3;
+        row-gap: 80px;
+    }
+
+    @include breakpoint($xl) {
+        column-gap: 90px;
+    }
+
+    &--list-view {
+        & .listing {
+            margin-bottom: 0;
+            padding: 20px 0;
+            max-width: unset;
+            border-top: 2px solid $green-dark;
+
+            &__link {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                &:hover {
+                    
+                    & > h3 {
+                        color: $green-dark;
+                    }
+                }
+            }
+
+            p,
+            &__title  {
+                line-height: unset;
+            }
+
+            &__price {
+                justify-self: end;
+            }
+
+            &__img-container,
+            &__status,
+            &__location,
+            &__area,
+            &__area-text,
+            &__price-text {
+                display: none;
+            }
+
+            &:last-child {
+                border-bottom: 2px solid $green-dark; 
+            }
+    
+            &__title {
+                padding-right: 20px; 
+                max-width: 100%;
+                flex-grow: 1;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-size: 1rem;
+            }
+
+            @include breakpoint($l) {
+                padding: 10px 0;
+
+                &__link {
+                    grid-template-columns: 2fr 2.5fr 1fr 2fr;    
+                }
+                
+                &__title {
+                    order: 0;
+                }
+
+                &__title {
+                    order: 0;
+                }
+
+                &__location,
+                &__area,
+                &__price {
+                    display: block;
+                    order: 1;
+
+                    &::after {
+                        content: unset;
+                    }
+                }
+            }
+
+            @include breakpoint($xl) {
+
+                p,
+                &__title {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,78 @@
+.article-teaser {
+    max-width: 500px;
+
+    &:not(:first-child) {
+        margin-top: 70px;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 585px;
+        height: auto;
+    }
+
+    &__text-container {
+        max-width: 500px;
+    }
+
+    &__h2 {
+        margin: 30px 10px 0 0;
+        @extend %font-16-b;
+        display: inline-block;
+    }
+
+    &__date {
+        display: inline-block;
+    }
+
+    &__text {
+        margin-top: 40px;
+        @extend %font-16-r;
+    }
+
+    &__button {
+        margin-top: 30px;
+        @extend %button;
+        max-width: 150px;
+    }
+
+    @include breakpoint($l) {
+        display: flex;
+        max-width: unset;
+        align-self: flex-start;
+        align-items: flex-start;
+
+        &:not(:first-child) {
+            margin-top: 130px;
+        }
+
+        &:nth-of-type(even) {
+            align-self: flex-end;
+            & > img {
+                order: 2;
+                margin: 0 0 0 60px;
+            }
+        }
+
+        & > img {
+            margin-right: 60px;
+        }
+
+        &__h2 {
+            margin-top: unset;
+        }
+
+        &__button {
+            padding: 10px 0;
+            font-size: 1.25rem;
+        }
+    }
+
+    @include breakpoint($xl){
+
+        &__text {
+            font-size: 1.125rem;
+            line-height: 30px;
+        }
+    }
+}

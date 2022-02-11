@@ -1,0 +1,75 @@
+//top bar in list layout 
+.order-list {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &--hide {
+        display: none;
+    }
+
+    &__item {
+        @extend %flex;
+
+        &:first-child {
+            justify-self: start;
+        }
+
+        &:last-child {
+            justify-self: end;
+        }
+
+        &:nth-child(2),
+        &:nth-child(3) {
+            display: none;
+        }
+
+        &[data-orderitem] {
+            &:hover {
+                cursor: pointer;
+            }            
+        }
+    }
+
+    &__text {
+        padding-right: 10px;
+        @extend %font-16-b;
+        color: $green-dark;
+    }
+
+    &__text,
+    &__arrow {
+        pointer-events: none;
+    }
+
+    &__arrow {
+        transition: all .3s;
+        &--turn {
+            transform: rotate(180deg);
+
+            & path {
+                fill: $black;
+            }
+        }
+    }
+
+    @include breakpoint($l) {
+        grid-template-columns: 2fr 2.5fr 1fr 2fr;
+
+        &__item {
+
+            &:nth-child(2),
+            &:nth-child(3) {
+                display: flex;
+                justify-self: flex-start;
+            }
+        }
+    }
+
+    @include breakpoint($xl) {
+
+        &__text {
+            font-size: 1.25rem;
+        }
+    }
+}

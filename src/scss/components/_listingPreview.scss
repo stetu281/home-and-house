@@ -1,0 +1,75 @@
+.listing {
+    //tile layout 
+    width: 100%;
+    max-width: 450px;
+    justify-self: center;
+    transform: translateY(70px);
+    opacity: 0;
+    transition: all 1s;
+
+    &--load {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    p {
+        @extend %font-16-r;
+        line-height: 30px;
+    }
+
+    &__img-container {
+        width: 100%;
+        height: 230px;
+        overflow: hidden;
+    }
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform .6s;
+    }
+
+    &__status {
+        margin-top: 15px;
+    }
+
+    &__title {
+        @extend %font-20-b;
+    }
+
+    &:hover {
+        cursor: pointer;
+
+        & div > img {
+            transform: scale(1.2);
+        }
+    }
+
+    @include breakpoint($m) {
+        max-width: unset;
+    }
+
+    @include breakpoint($xl) {
+        p {
+            font-size: 1.125rem;
+        }
+
+        &__title {
+            font-size: 1.6rem;
+            line-height: 40px;
+        }
+
+        &__area,
+        &__price {
+            display: inline-block;
+        }
+
+        &__area {
+            &::after {
+                content: ',';
+            }
+        }
+    }
+}

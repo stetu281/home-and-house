@@ -1,0 +1,100 @@
+.footer {
+    padding: 40px 0;
+    @extend %font-18-r;
+    line-height: 30px;
+
+    &__content {
+        @extend %content-width;
+    }
+
+    &__logo {
+        display: none;
+    }
+
+    &__title {
+        @extend %font-18-b;
+    }
+
+    &__address {
+        font-style: unset;
+    }
+
+    &__tel {
+        margin-top: 30px;
+        display: block;
+    }
+
+    &__link {
+        color: $black;
+
+        &:hover {
+            color: $green-dark;
+        }
+    }
+
+    &__list {
+        margin-top: 30px;
+    }
+
+    &__list-item {
+        @extend %font-18-b;
+
+        &:nth-last-child(2) {
+            margin-top: 30px;
+        }
+
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
+            @extend %font-18-r;
+        }
+    }
+
+    &__totop {
+        display: none;
+    }
+
+    @include breakpoint($l) {
+        padding: 100px 0;
+
+         &__content {
+            @include col-3;
+            position: relative;
+         }
+
+         &__logo {
+             display: unset;
+             margin-top: 10px;
+             width: 150px;
+         }
+
+         &__list {
+             margin: unset;
+         }
+
+         &__totop {
+             display: unset;
+             position: absolute;
+             bottom: -50px;
+             right: 0;
+
+             rect {
+                 transition: fill 0.3s;
+             }
+
+             &:hover {
+                 cursor: pointer;
+
+                 rect {
+                     fill: $gray-hover;
+                 }
+             }
+         }
+    }
+
+    @include breakpoint($xl) {
+
+        &__content {
+            column-gap: 90px;
+        }
+    }
+}

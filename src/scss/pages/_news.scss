@@ -1,0 +1,35 @@
+.news {
+    padding: $mobile-padding;
+    background-color: $green-light;
+    min-height: 100vh;
+
+    &__content {
+        @extend %content-width;
+    }
+
+    &__container {
+        @extend %flex;
+        flex-direction: column;
+        opacity: 0;
+        transform:translateY(70px);
+        transition: all .5s ease-in-out;
+    
+        &--load {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    &__h1 { 
+        @extend %font-24-r;
+    }
+
+    @include breakpoint($m) {
+        padding: $desktop-padding;
+
+        &__h1 {
+            font-size: 2.5rem;
+            padding-bottom: 90px;
+        }
+    }
+}

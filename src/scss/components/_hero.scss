@@ -1,0 +1,106 @@
+.hero {
+
+    &__img-container {
+        padding-top: 70px;
+        height: 300px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        overflow: hidden;
+    }
+
+    &__img {
+        margin: 0 auto;
+        width: 100%;
+        max-width: $cwxl;
+        height: 100%;
+        object-fit: cover;
+        grid-area: 1 / 1 / 2 / 2;
+        animation-name: img-fade;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        animation-duration: 24s;
+
+        &:nth-child(1) {
+            animation-delay: 18s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: 12s;
+        }
+
+        &:nth-child(3) {
+            animation-delay: 6s;
+        }
+
+        &:nth-child(4) {
+            animation-delay: 0s;
+        }
+
+        //prevent flashing on pageload -> remove with js after 3s
+        &--hide {
+            opacity: 0;
+        }
+    }
+
+    @keyframes img-fade {
+        0% {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        20% {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+
+        35% {
+            opacity: 0;
+        }
+
+        90% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    &__headline {
+        padding: 30px 20px;
+        font-size: 1.25rem;
+        text-align: center;
+        font-weight: 400;
+    }
+
+    @include breakpoint($m) {
+
+        &__img-container {
+            height: 600px;
+            padding-top: 0;
+        }
+
+        &__headline {
+            font-size: 2.5rem;
+        }
+    }
+
+    @include breakpoint($l) {
+
+        &__img-container {
+            height: 100vh;
+            min-height: 850px;
+        }
+
+        &__headline {
+            margin-top: -280px;
+            padding: 35px 0;
+            height: 205px;
+            font-size: 3.5rem;
+            position: relative;
+            z-index: 5;
+            background-color: rgba($white, 0.7); 
+        }
+    }
+}

@@ -1,0 +1,34 @@
+<form class="search-form">
+    <label class="search-form__label search-form__what">Was
+        <select id="select-propertytype" class="search-form__select">
+            <option value="all_properties">Alle Objekte</option>
+            <!--add options with js based on db entries-->
+        </select>
+    </label>
+    <label class="search-form__label search-form__where">Wo
+        <select id="select-canton" class="search-form__select">
+            <option value="all_cantons">Alle Kantone</option>
+            <!--add options with js based on db entries-->
+        </select>
+    </label>                 
+    <label class="search-form__label search-form__sort">Sortierung
+        <select id="select-sort" class="search-form__select">
+            <option value="default">Auswählen</option>
+            <option value="price_asc">Preis aufsteigend</option>
+            <option value="price_desc">Preis absteigend</option>
+            <option value="date_asc">Datum aufsteigend</option>
+            <option value="date_desc">Datum absteigend</option>
+            <option value="area_asc">Fläche aufsteigend</option>
+            <option value="area_desc">Fläche absteigend</option>
+        </select>
+    </label>
+    <div class="toggler">
+        <p class="toggler__option">Mieten</p>
+        <label class="toggler__label" aria-label="Zwischen Mieten und Kaufen wählen">
+            <input id="toggler" class="toggler__input" type="checkbox">
+            <span class="toggler__button"></span>
+        </label>
+        <p class="toggler__option toggler__option--green">Kaufen</p>                      
+    </div>
+    <button type="button" class="search-form__button button" aria-label="Immobilien suchen">Suchen</button>
+</form>

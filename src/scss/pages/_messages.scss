@@ -1,0 +1,18 @@
+.messages {
+    width: 100%;
+
+    & th {
+        background-color: $green-dark;
+        color: $white;
+    }
+
+    & td {
+        background-color: $green-light;
+    }
+
+    & th,
+    & td {
+        border: 1px solid $black;
+        padding: 20px;
+    }
+}

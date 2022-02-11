@@ -1,0 +1,54 @@
+.pagination-link {
+    display: none;
+
+    &__dir {
+        @extend %flex;
+        transition: transform .2s;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+    }
+
+    @include breakpoint($l) {
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &__dir {
+
+            &[data-dir="forw"] {
+                grid-column: 2 / 3;
+                justify-self: end;
+            }
+    
+            &[data-dir="backw"] {
+                grid-column: 1 / 2;
+                justify-self: start;
+            }
+        }
+    
+        &__text {
+            font-size: 1.125rem;
+            font-weight: 700;
+            color: $green-dark;
+            transition: color .3s;
+            pointer-events: none;
+        }
+
+        &__img {   
+            pointer-events: none;
+
+            &--forw {
+                margin-left: 15px;
+            }
+
+            &--back {
+                margin-right: 15px;
+                transform: rotate(180deg);
+            }
+        }
+
+    }
+}

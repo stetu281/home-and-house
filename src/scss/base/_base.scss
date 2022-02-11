@@ -1,0 +1,29 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-family;
+    font-size: 1rem;
+    color: $black;
+}
+
+.main {
+    padding-top: 75px;//header-heigth
+    
+    &--index {
+        padding-top: 0;      
+    }
+
+    @include breakpoint($m) {
+        padding-top: 0;
+
+        &--index {
+            margin-top: -130px;//header-heigth
+        }
+    }
+}
+
+.hide {
+    display: none;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Home and House Immobilien</title>
+    <meta name="description" content="Diplomarbeit von Stefan Turner.">
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="../favicon.ico" sizes="any">
+</head>
+<body id="immobilien" data-page="home">
+    <include src="./partials/general/header.html"></include>
+    <main class="main main--index">
+        <include src="./partials/home/hero.html"></include>
+        <section class="properties">
+            <div class="properties__content">
+                <h2 class="properties__title">Immobilien</h2>
+                <include src="./partials/home/search-form.html"></include>
+                <div class="property-list">
+                    <include src="./partials/home/choose-layout.html"></include>
+                    <include src="./partials/home/list-layout-order.html"></include>
+                    <p class="listings-container__no-result hide">Leider keine Immobilien gefunden</p>
+                    <ul id="listings" class="listings-container"><!--for list view change to listings-container--list-view-->
+                        <!--add listings with js-->
+                    </ul>
+                    <button class="property-list__more-button">Mehr laden </button>
+                    <include src="./partials/home/pagination-link.html"></include>
+                </div>
+            </div>
+        </section>
+    </main>
+    <include src="./partials/general/footer.html"></include>
+</body>
+</html>

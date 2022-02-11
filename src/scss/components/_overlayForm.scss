@@ -1,0 +1,239 @@
+.overlay-form {
+    padding: 110px 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    right: 0;
+    background-color: $green-dark;
+    z-index: 20;
+    transition: left .5s;
+    overflow-y: scroll;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+    
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+
+    &--open {
+        left: 0;
+    }
+
+    &__content {
+        @extend %content-width;
+    }
+
+    &__close {
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        
+        &:hover {
+            cursor: pointer;
+
+            & svg {
+                & path {
+                    stroke-width: 3;
+                    stroke: $white;    
+                }  
+            }
+        }
+    }
+
+    &__close-img {
+        width: 30px;
+        height: 30px;
+
+        & path {
+            transition: all .3s;    
+        }      
+    }
+
+    &__title {
+        padding-bottom: 0;
+        @extend %font-24-r;
+        text-align: left;
+    }
+
+    &__info {
+        margin-top: 20px;
+    }
+
+    &__object {
+        @extend %font-24-b;
+        text-align: left;
+        display: block;
+    }
+
+    &__form {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: repeat(10, auto);
+        gap: 15px 30px;
+    }
+
+    &__name,
+    &__lastname,
+    &__address,
+    &__email,
+    &__phone,
+    &__message,
+    &__checkbox,
+    &__send {
+        grid-column: 1 / 3 ;
+    }
+
+    &__message,
+    &__checkbox,
+    &__send {
+        margin-top: 20px;
+    }
+
+    & input,
+    & textarea {
+        padding: 15px;
+        display: block;
+        width: 100%;
+        outline: none;
+        border: none;
+
+        &:not([type=checkbox]) {
+            margin-top: 15px;
+        }
+
+        &:focus {
+            @extend %focus;
+        }
+    }
+
+    & textarea {
+        height: 170px;
+    }
+
+    &__checkbox {
+        @extend %flex;
+        justify-content: flex-start;
+        @extend %font-16-b;
+    }
+
+    &__checkbox-input {
+        display: grid;
+        grid-template-areas: "checkbox";
+
+        > * {
+            grid-area: checkbox;
+        }
+
+        input {
+            opacity: 0;
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__checkbox-input input:checked + &__checkbox-control svg {
+        transform: scale(1);
+    }
+
+    &__checkbox-input input:focus + &__checkbox-control {
+        @extend %focus;
+    }
+
+    &__checkbox-control {
+        margin-right: 15px;
+        @extend %flex;
+        width: 50px;
+        height: 50px;
+        background-color: $white;
+
+        & svg {
+            transition: transform .2s;
+            transform: scale(0);
+            transform-origin: center; 
+        }
+    }
+
+    &__send {
+        @extend %button;
+        max-width: 330px;
+        background-color: $black;
+        transition: all .3s;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+    }
+
+    &__error {
+        color: $error-red;
+        margin-top: 30px;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    @include breakpoint($l) {
+
+        &__close {
+            right: 45px;
+            top: 45px;
+        }
+
+        &__close-img {
+            width: 50px;
+            height: 50px;
+        }
+
+        &__title,
+        &__object {
+            font-size: 2rem;   
+        }
+
+        & label {
+            font-size: 1.25rem;
+        }
+
+        &__form {
+            grid-template-columns: 1fr 1fr 0.6fr 1.4fr;
+            grid-template-rows: repeat(5, auto);
+            gap: 40px 50px;
+        }
+
+        &__lastname,
+        &__email {
+            grid-column: 3 / 5;
+        }
+
+        &__message {
+            grid-column: 1 / 5;
+        }
+
+        &__checkbox,
+        &__send {
+            grid-row: 5 / 6;
+        }
+
+        &__checkbox-info {
+            grid-column: 1 / 2;
+        }
+
+        &__checkbox-view {
+            grid-column: 2 / 3;
+        }
+
+        &__message {
+            margin-top: unset;
+        }
+
+        &__send {
+            padding: 10px 30px;
+            grid-column: 4 / 5;
+            justify-self: end;
+            font-size: 1.25rem;
+        }
+    }
+}

@@ -1,0 +1,93 @@
+.latest-listings {
+    padding: 40px 0;
+    background-color: $green-dark;
+
+    &__content {
+        @extend %content-width;
+    }
+
+    &__heading {
+        @extend %font-24-b;
+    }
+
+    &__listings {
+        margin-top: 40px;
+        display: grid;
+        row-gap: 50px;
+
+        & .listing {
+
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    &__link-container {
+        @extend %flex;
+        justify-content: flex-end;
+    }
+
+    &__all-link {
+        @extend %flex;
+        width: fit-content;
+        margin-top: 50px;
+
+        &:hover {
+            
+            & > p {
+                color: $white;
+            }
+
+            & svg path {
+                stroke: $white;
+            }
+        }
+    }
+
+    &__all-link-text {
+        @extend %font-18-b, %transition;
+    }
+
+    &__all-link-img {
+        margin-left: 15px;
+
+        & path {
+            transition: stroke .3s;
+        }
+    }
+
+    @include breakpoint($m) {
+        padding: 100px 0;
+
+        &__heading {
+            font-size: 2.5rem;
+        }
+
+        &__listings {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 40px;
+        }
+    }
+
+    @include breakpoint($l) {
+        
+        &__listings {
+            @include col-3;
+            margin-top: 90px;
+
+            & .listing {
+                &:last-child {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    @include breakpoint($xl) {
+
+        &__listings {
+            column-gap: 90px;
+        }
+    }
+}
