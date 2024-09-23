@@ -18,8 +18,6 @@ Zeitplan und Meilensteine befinden sich in einem [Google Spreadsheet](https://do
 
 - Die Schriftgrössen weichen zum Teil vom Figmadesign ab. Im Design varieren die Schriftgrössen einiger Paragraphen und Titel von Seite zu Seite, was für mich störend wirkte. Daher habe ich diese vereinheitlicht.
 
-- Da es ein privates Repository ist, habe ich Logindaten hier ins readme geschrieben, was ich sonst natürlich nicht machen würde. 
-
 - Mobile Navigation habe ich als slide-in umgesetzt, nicht wie im Design als fade-in, da es meiner Meinung nach besser passt und einheitlich mit dem slide-in Formular ist. 
 
 - Auf grossen Bildschirmen habe ich die Hero Section ein wenig umgestaltet, da ich der Meinung bin, dass die Headline nicht erst durch scrollen zu sehen sein sollte.
@@ -28,7 +26,7 @@ Zeitplan und Meilensteine befinden sich in einem [Google Spreadsheet](https://do
 
 - Die Seiten habe ich im W3c Validator geprüft. Auf der Detailseite erhalte ich eine Warnung wegen einem leeren h1 tag, welchen ich mit Javascript befülle.
 
-- Erhaltene Nachrichten vom Formular können unter [https://stefanturner.ch/diplomarbeit/anfragen/anfragen.html](https://stefanturner.ch/diplomarbeit/anfragen/anfragen.html) abgerufen werden. Es ist eine einfache Tabelle der Nachrichten, welche nicht gestylt ist. 
+- Erhaltene Nachrichten vom Formular können unter [https://stefanturner.ch/projekte/anfragen/anfragen.html](https://stefanturner.ch/projekte/anfragen/anfragen.html) abgerufen werden. Es ist eine einfache Tabelle der Nachrichten, welche nicht gestylt ist. 
 
 ## Technologiewahl
 
