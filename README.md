@@ -6,7 +6,7 @@ fiktives Immobilien Unternehmen zu erstellen. Dabei sollte das vorgegebene Desig
 
 **lauffähige Version:**   
 
-[https://stefanturner.ch/projects/estate](https://stefanturner.ch/projects/estate)
+[https://stefanturner.ch/projekte/immoapp/](https://stefanturner.ch/projekte/immoapp/)
 
 ![Screenshots der Arbeit](https://github.com/stetu281/home-and-house/blob/main/src/img/screenshots/screenshots.jpg)
 
