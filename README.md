@@ -6,7 +6,7 @@ fiktives Immobilien Unternehmen zu erstellen. Dabei sollte das vorgegebene Desig
 
 **lauffähige Version:**   
 
-[https://stefanturner.ch/projekte/immoapp/](https://stefanturner.ch/projekte/immoapp/)
+[https://projekte.stefanturner.ch/immoapp/](https://projekte.stefanturner.ch/immoapp/)
 
 ![Screenshots der Arbeit](https://github.com/stetu281/home-and-house/blob/main/src/img/screenshots/screenshots.jpg)
 
@@ -26,7 +26,7 @@ Zeitplan und Meilensteine befinden sich in einem [Google Spreadsheet](https://do
 
 - Die Seiten habe ich im W3c Validator geprüft. Auf der Detailseite erhalte ich eine Warnung wegen einem leeren h1 tag, welchen ich mit Javascript befülle.
 
-- Erhaltene Nachrichten vom Formular können unter [https://stefanturner.ch/projekte/immoapp/anfragen/anfragen.html](https://stefanturner.ch/projekte/immoapp/anfragen/anfragen.html) abgerufen werden. Es ist eine einfache Tabelle der Nachrichten, welche nicht gestylt ist. 
+- Erhaltene Nachrichten vom Formular können unter [https://projekte.stefanturner.ch/immoapp/anfragen/anfragen.html](https://projekte.stefanturner.ch/immoapp/anfragen/anfragen.html) abgerufen werden. Es ist eine einfache Tabelle der Nachrichten, welche nicht gestylt ist. 
 
 ## Technologiewahl
 
